@@ -1,13 +1,52 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+.container {
+    margin-top: 2rem;
+   height: 40hw;
+   width: 40vw;
+ }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+table
+{
+    border: double blue 5px;
+    //margin-top: 10rem; 
+}
 
-*/
+ td
+{
+  /*   width: 100px; */
+    
+    border: dashed green 20px;
+
+}
+// class-aplied-to-x
+/* .muestracolor
+{
+    height:50px;
+    width: 50px;
+    border: double 3px blue;
+}
+#colorelegido1
+{
+    background-color: gold;
+}
+#colorelegido2
+{
+    background-color: silver;
+}
+td
+{
+    width: 50px;
+    height: 50px;
+    border: dashed green 3px;
+}
+table
+{
+    border: double blue 5px;
+}
+div#contenedorTabla
+{
+    position: absolute;
+    top: 0%;
+    left: 35%;
+} */
