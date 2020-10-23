@@ -9,13 +9,13 @@ export const TicTacToe = () => {
 
 	const winningPositions = [
 		[0, 1, 2],
-		[3, 4, 5],
-		[6, 7, 8],
 		[0, 3, 6],
-		[1, 4, 7],
-		[2, 5, 8],
 		[0, 4, 8],
-		[2, 4, 6]
+		[1, 4, 7],
+		[2, 4, 6],
+		[2, 5, 8],
+		[3, 4, 5],
+		[6, 7, 8]
 	];
 
 	const [player, setPlayers] = useState(0);
@@ -37,12 +37,68 @@ export const TicTacToe = () => {
 		Winner();
 	};
 	const Winner = () => {
-		let WinnerArray = winningPositions.map((WinnerPosition, i) => {
-			console.log(WinnerPosition);
-			/* /* 	for (let index = 0; index < WinnerPosition[i].length; index++) {
-				console.log(WinnerPosition[i]);
-         } */
-		});
+		for (let index = 0; index < winningPositions.length; index++) {
+			for (
+				let index2 = 0;
+				index2 < winningPositions[index2].length;
+				index2++
+			) {
+				if (
+					(player1.includes("0") &&
+						player1.includes("1") &&
+						player1.includes("2")) ||
+					(player2.includes("0") &&
+						player2.includes("1") &&
+						player2.includes("2"))
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("0") &&
+					player1.includes("3") &&
+					player1.includes("6")
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("0") &&
+					player1.includes("4") &&
+					player1.includes("8")
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("1") &&
+					player1.includes("4") &&
+					player1.includes("7")
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("2") &&
+					player1.includes("4") &&
+					player1.includes("6")
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("2") &&
+					player1.includes("5") &&
+					player1.includes("8")
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("3") &&
+					player1.includes("4") &&
+					player1.includes("5")
+				) {
+					console.log("win");
+				} else if (
+					player1.includes("6") &&
+					player1.includes("7") &&
+					player1.includes("8")
+				) {
+					console.log("win");
+				} else {
+					console.log("notWin");
+				}
+			}
+		}
 	};
 	return (
 		<div classNAme="d-flex justify-content-center">
