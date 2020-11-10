@@ -1,4 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+
+import { TicTacToe } from "./tictactoegrid.jsx";
+import { MyModal } from "./modalcomponent.jsx";
+
+//create your first component
+export function Home() {
+	return (
+		<div className="text-center mt-5">
+			<div>
+				<MyModal />
+			</div>
+			<div className="text-center mt-5">
+				<TicTacToe />
+			</div>
+		</div>
+	);
+}
+
+/* import React, { useState, useEffect } from "react";
 import { TicTacToe } from "./tictactoegrid.jsx";
 import { MyModal } from "./modalcomponent.jsx";
 
@@ -17,4 +36,4 @@ export function Home() {
 			</div>
 		</div>
 	);
-}
+} */

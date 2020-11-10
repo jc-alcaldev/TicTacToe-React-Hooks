@@ -21,21 +21,31 @@ export const TicTacToe = () => {
 	const [player, setPlayers] = useState(0);
 
 	const [player1] = useState([]);
-
 	const [player2] = useState([]);
+	const [print, setPrint] = useState("push");
+	//var print = "push";
 
 	const MyPlayerAsign = e => {
 		if (player == 0) {
 			setPlayers(1);
+			setPrint("X");
 			player1.push(e.target.id);
-			console.log(player1);
+			console.log(e.target.value, "soy e.target");
+
+			console.log(player1, "en asign");
 		} else {
 			setPlayers(0);
+			setPrint("O");
 			player2.push(e.target.id);
-			console.log(player2);
+			console.log(player2, "en asign");
 		}
 		Winner();
+		console.log(print, "es print");
+		return print;
 	};
+
+	const Print = () => {};
+
 	const Winner = () => {
 		for (let index = 0; index < winningPositions.length; index++) {
 			for (
@@ -108,36 +118,42 @@ export const TicTacToe = () => {
 				<Table striped bordered hover variant="dark">
 					<tbody>
 						<tr>
-							<td id="0" onClick={e => MyPlayerAsign(e)}>
-								0
+							<td
+								id="0"
+								onClick={e => {
+									//console.log(print, "aaa");
+									let p = MyPlayerAsign(e);
+									//console.log(print, "jajjaja");
+								}}>
+								{p}
 							</td>
 							<td id="1" onClick={e => MyPlayerAsign(e)}>
-								1
+								{print}
 							</td>
 							<td id="2" onClick={e => MyPlayerAsign(e)}>
-								2
+								{print}
 							</td>
 						</tr>
 						<tr>
 							<td id="3" onClick={e => MyPlayerAsign(e)}>
-								3
+								{print}
 							</td>
 							<td id="4" onClick={e => MyPlayerAsign(e)}>
-								4
+								{print}
 							</td>
 							<td id="5" onClick={e => MyPlayerAsign(e)}>
-								5
+								{print}
 							</td>
 						</tr>
 						<tr>
 							<td id="6" onClick={e => MyPlayerAsign(e)}>
-								6
+								{print}
 							</td>
 							<td id="7" onClick={e => MyPlayerAsign(e)}>
-								7
+								{print}
 							</td>
 							<td id="8" onClick={e => MyPlayerAsign(e)}>
-								8
+								{print}
 							</td>
 						</tr>
 					</tbody>
@@ -146,3 +162,57 @@ export const TicTacToe = () => {
 		</div>
 	);
 };
+
+/* import React from "react";
+
+import PropTypes from "prop-types";
+
+const Square = props => {
+	return <button clasNAme="square">{props.value}</button>;
+};
+
+const Grid = () => {
+	let renderSquare = i => {
+		return <Square value={i} />;
+	};
+
+	const status = "Next player: X";
+	return (
+		<div>
+			<div className="status">{status}</div>
+			<div className="board-row">
+				{renderSquare(0)}
+				{renderSquare(1)}
+				{renderSquare(2)}
+			</div>
+			<div className="board-row">
+				{renderSquare(3)}
+				{renderSquare(4)}
+				{renderSquare(5)}
+			</div>
+			<div className="board-row">
+				{renderSquare(6)}
+				{renderSquare(7)}
+				{renderSquare(8)}
+			</div>
+		</div>
+	);
+};
+
+export const Game = () => {
+	return (
+		<div className="game">
+			<div className="game-grid">
+				<Grid />
+			</div>
+			<div>
+				<div>status</div>
+				<ol>todo</ol>
+			</div>
+		</div>
+	);
+};
+
+Square.propTypes = {
+	value: PropTypes.number
+};  */
