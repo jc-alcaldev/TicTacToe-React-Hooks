@@ -1,52 +1,26 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+body{
+    height: 100%;
+    margin: 0;
+}
 .container {
     margin-top: 2rem;
-   height: 40hw;
-   width: 40vw;
+    height: 47rem;
+    width: 51rem;
  }
-
 table
 {
-    border: double blue 5px;
-    //margin-top: 10rem; 
+    height: 100%;
 }
-
+.table td {
+    padding: 4rem;
+} 
  td
 {
-  /*   width: 100px; */
-    
+    height: 15.7rem;
+    width: 17rem;
+    font-size: 4rem;
     border: dashed green 20px;
 
 }
-// class-aplied-to-x
-/* .muestracolor
-{
-    height:50px;
-    width: 50px;
-    border: double 3px blue;
-}
-#colorelegido1
-{
-    background-color: gold;
-}
-#colorelegido2
-{
-    background-color: silver;
-}
-td
-{
-    width: 50px;
-    height: 50px;
-    border: dashed green 3px;
-}
-table
-{
-    border: double blue 5px;
-}
-div#contenedorTabla
-{
-    position: absolute;
-    top: 0%;
-    left: 35%;
-} */
